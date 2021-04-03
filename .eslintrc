@@ -1,0 +1,29 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "extends": [
+    "plugin:vue/vue3-essential",
+    "eslint:recommended",
+    // "@vue/standard",
+    "@vue/typescript/recommended"
+    // "@vue/prettier",
+    // "@vue/prettier/@typescript-eslint"
+  ],
+  "parserOptions": {
+    "ecmaVersion":2020
+  },
+  "rules": {
+    "semi": ["warn", "never"],
+    "space-before-function-paren": ["warn", "always"],
+    "quotes": ["warn", "single"],
+    "comma-dangle": ["warn", "never"]
+  },
+  "plugins": [
+    "prettier"
+  ]
+}
+
