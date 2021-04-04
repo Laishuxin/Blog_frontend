@@ -1,0 +1,42 @@
+// justify-center: justify-content: center
+@each $key, $var in $justify-directions {
+  .justify-#{$key} {
+    justify-content: $var;
+  }
+}
+
+// align-center: align-items: center
+@each $key, $var in $align-directions {
+  .align-#{$key} {
+    align-items: $var;
+  }
+}
+
+// flex-grow-1
+@for $var from 0 through 5 {
+  .flex-grow-#{$var} {
+    flex-grow: $var;
+  }
+
+  .flex-shrink-#{$var} {
+    flex-shrink: $var;
+  }
+
+  .flex-#{$var} {
+    flex: $var;
+  }
+}
+
+// flex-column
+@each $var in $flex-directions {
+  .flex-#{$var} {
+    flex-direction: $var;
+  }
+}
+
+// flex-wrap, flex-nowrap, ...
+@each $var in $wrap-items {
+  .flex-#{$var} {
+    flex-wrap: $var;
+  }
+}

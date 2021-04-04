@@ -1,0 +1,85 @@
+$size-base: 1rem;
+
+// text
+$text-size: (
+  'xs': 0.373,
+  'sm': 0.427,
+  'md': 0.48,
+  'lg': 0.533,
+  'xl': 0.587,
+  'xxl': 0.667,
+);
+
+// directions start
+$text-directions: (left, right, center);
+$common-directions: (left, right, bottom, top);
+$justify-directions: (
+  'start': flex-start,
+  'end': flex-end,
+  'center': center,
+  'between': space-between,
+  'around': space-around,
+);
+
+$align-directions: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+);
+
+$flex-directions: (column, row);
+$spacing-directions: (
+  't': top,
+  'b': bottom,
+  'l': left,
+  'r': right,
+);
+// direction end
+
+$display-items: (flex, block, inline-block);
+$wrap-items: (wrap, nowrap);
+$spacing-types: (
+  'm': margin,
+  'p': padding,
+);
+
+$spacing-sizes: (
+  '0': 0,
+  '1': 0.1,
+  '2': 0.15,
+  '3': 0.20,
+  '4': 0.25,
+  '5': 0.3,
+  '6': 0.4,
+  '7': 0.5,
+  '8': 0.6,
+);
+
+$box-types: (
+  'border': border-box,
+  'content': content-box,
+);
+
+$percent-items: (
+  '0': 0,
+  '20': 20%,
+  '25': 25%,
+  '50': 50%,
+  '75': 75%,
+  '100': 100%,
+);
+
+// font start
+:root {
+  --text-font-family: Quattrocento, Arial, Helvetica, Nimbus Sans L, sans-serif;
+  --header-font-family: Josefin Sans, Arial, Helvetica, Nimbus Sans L,
+    sans-serif;
+}
+$header-font-family: var(--header-font-family);
+$text-font-family: var(--text-font-family);
+// font end
+
+// box-shadow start
+$card-box-shadow: 0 1px 3px var(--card-shadow-color, rgb(18 18 18 / 10%));
+
+// box-shadow end

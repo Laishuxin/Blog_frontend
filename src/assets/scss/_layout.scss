@@ -1,0 +1,59 @@
+// f-flex, d-block, ...
+@each $var in $display-items {
+  // d-flex
+  .d-#{$var} {
+    display: $var;
+  }
+}
+
+// mt-1: xxx
+// $type-alias = m, $type-name = margin
+@each $type-alias, $type-name in $spacing-types {
+  // $size-alias = 0, $size-name = 0
+  @each $size-alias, $size-name in $spacing-sizes {
+    // mx-1: xxx
+    .#{$type-alias}x-#{$size-alias} {
+      #{$type-name}-left: $size-name * $size-base;
+      #{$type-name}-right: $size-name * $size-base;
+    }
+
+    // my-1: xx
+    .#{$type-alias}y-#{$size-alias} {
+      #{$type-name}-top: $size-name * $size-base;
+      #{$type-name}-bottom: $size-name * $size-base;
+    }
+
+    // m-1: xx
+    .#{$type-alias}-#{$size-alias} {
+      #{$type-name}: $size-name * $size-base;
+    }
+
+    // mt-1: xxx
+    @each $d-alias, $d-name in $spacing-directions {
+      .#{$type-alias}#{$d-alias}-#{$size-alias} {
+        #{$type-name}-#{$d-name}: $size-name * $size-base;
+      }
+    }
+  }
+}
+
+// box-border
+@each $type, $name in $box-types {
+  .box-#{$type} {
+    box-sizing: $name;
+  }
+}
+
+// w-0, w-100, ...
+@each $key, $value in $percent-items {
+  .w-#{$key} {
+    width: $value;
+  }
+  .h-#{$key} {
+    height: $value;
+  }
+}
+
+.over-auto {
+  overflow-y: scroll;
+}

@@ -4,3 +4,4 @@ src/assets/*
 .vscode/*
 
 *.d.ts
+*.config.js

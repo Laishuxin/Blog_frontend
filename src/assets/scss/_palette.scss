@@ -1,0 +1,41 @@
+:root {
+  // --primary-color: #37a1f4;
+  --primary-color: rgba(33,150,243,0.15);
+  --primary-color-1: rgba(33,150,243,0.15);
+  --primary-color-2: #2196f3;
+  --primary-color-3: #0d89ec;
+  --black-color: #000;
+  --white-color: #fff;
+  --text-color: #242424;
+  --text-color-1: #7c7c7c;
+  --text-color-2: #5b5b5b;
+  --text-color-3: #505050;
+  --text-color-4: #3a3a3a;
+  --bg-color: #ffff;
+  --bg-light-color: #f8f8f8;
+  --border-color: #eaecef;
+  --code-bg-color: #ecf4fa;
+  --box-shadow-color: #f0f1f2;
+  --card-shadow-color: rgba(0, 0, 0, 0.15);
+  --grey-color-1: #eee;
+  --grey-color-2: #bbb;
+  --grey-color-3: #333;
+  --link-color: #13daec;
+  --link-hover-color: #42e1f0;
+  --selection-color: var(--primary-color-3);
+  --selection-bg-color: var(--primary-color-1);
+}
+
+$colors: (
+  'primary-light': var(--primary-color-1, #37a1f4),
+  'primary': var(--primary-color, #2196f3),
+  'primary-deep': var(--primary-color-3, #0d89ec),
+  'primary-1': var(--primary-color-1, #37a1f4),
+  'primary-2': var(--primary-color-2, #2196f3),
+  'primary-3': var(--primary-color-3, #37a1f4),
+  'black': var(--black-color, #000),
+  'white': var(--white-color, #fff),
+  'grey-1': var(--grey-color-1, #eee),
+  'grey-2': var(--grey-color-2, #bbb),
+  'grey-3': var(--grey-color-3, #333),
+);

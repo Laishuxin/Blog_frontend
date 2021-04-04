@@ -1,0 +1,7 @@
+.card-box-shadow-negative {
+  @include card-box-shadow-mixin(-1);
+}
+
+.card-box-shadow-positive {
+  @include card-box-shadow-mixin();
+}

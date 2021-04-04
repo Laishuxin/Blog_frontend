@@ -1,0 +1,56 @@
+@import './font.css';
+// text-sm: font-size: x rem, ...
+@each $key, $var in $text-size {
+  // text-sm
+  .text-#{$key} {
+    font-size: $var * $size-base;
+  }
+}
+
+// text-1: font-weight: 100, ...
+@for $index from 1 through 8 {
+  .text-#{$index} {
+    font-weight: $index * 100;
+  }
+}
+
+// text-primary: color: xxx, ...
+@each $key, $var in $colors {
+  .text-#{$key} {
+    color: $var;
+  }
+
+  // bg-primary-light
+  .bg-#{$key} {
+    background-color: $var;
+  }
+}
+
+@each $var in $text-directions {
+  // .text-center
+  .text-#{$var} {
+    text-align: $var;
+  }
+}
+
+.header-font {
+  font-family: $header-font-family;
+}
+
+.text-font {
+  font-family: $text-font-family;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title {
+  @extend .header-font;
+}
+
+body {
+  @extend .text-font;
+}
