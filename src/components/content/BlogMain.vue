@@ -1,43 +1,26 @@
 <template>
   <main class="blog-main">
-    <div class="text-xs">text-xs</div>
-    <div class="text-xs">text-xs</div>
-    <div class="text-xs">text-xs</div>
-    <div class="text-xs">text-xs</div>
-    <div class="text-xs">text-xs</div>
-    <div class="text-sm">text-sm</div>
-    <div class="text-md">text-md</div>
-    <div class="text-lg">text-lg</div>
-    <div class="text-xl">text-xl</div>
-    <div class="text-xxl">text-xxl</div>
-    <div class="text-sm">text-sm</div>
-    <div class="text-md">text-md</div>
-    <div class="text-lg">text-lg</div>
-    <div class="text-xl">text-xl</div>
-    <div class="text-xxl">text-xxl</div>
-    <div class="text-sm">text-sm</div>
-    <div class="text-md">text-md</div>
-    <div class="text-lg">text-lg</div>
-    <div class="text-xl">text-xl</div>
-    <div class="text-xxl">text-xxl</div>
-    <div class="text-sm">text-sm</div>
-    <div class="text-md">text-md</div>
-    <div class="text-lg">text-lg</div>
-    <div class="text-xl">text-xl</div>
-    <div class="text-xxl">text-xxl</div>
-    <div class="text-sm">text-sm</div>
-    <div class="text-md">text-md</div>
-    <div class="text-lg">text-lg</div>
-    <div class="text-xl">text-xl</div>
-    <div class="text-xxl">text-xxl</div>
+    <blog-article-list :blogArticleList="blogArticleList"/>
   </main>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, PropType } from 'vue'
+import { BlogArticleList as ArticleList } from '@/types/defineBlogArticle'
+import BlogArticleList from '@/components/common/BlogArticle/index.vue'
 
 export default defineComponent({
   name: 'blog-main',
+  props: {
+    blogArticleList: {
+      type: Array as PropType<ArticleList>,
+      required: true,
+      default () { return [] } 
+    }
+  },
+  components: {
+    BlogArticleList
+  },
   setup () {
     return {}
   }

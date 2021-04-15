@@ -47,7 +47,7 @@ $spacing-sizes: (
   '0': 0,
   '1': 0.1,
   '2': 0.15,
-  '3': 0.20,
+  '3': 0.2,
   '4': 0.25,
   '5': 0.3,
   '6': 0.4,
@@ -83,3 +83,25 @@ $text-font-family: var(--text-font-family);
 $card-box-shadow: 0 1px 3px var(--card-shadow-color, rgb(18 18 18 / 10%));
 
 // box-shadow end
+
+// z-index start
+$zindex-dropdown: 1000;
+$zindex-sticky: 1020;
+$zindex-fixed: 1030;
+$zindex-offcanvas: 1040;
+$zindex-modal-backdrop: 1050;
+$zindex-modal: 1060;
+$zindex-popover: 1070;
+$zindex-tooltip: 1080;
+// z-index end
+
+
+// position start
+$position-items: (
+  absolute,
+  relative,
+  fixed,
+  sticky,
+);
+
+// position end

@@ -4,17 +4,21 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "lint": "eslint"
   },
   "dependencies": {
     "amfe-flexible": "^2.2.1",
+    "axios": "^0.21.1",
     "element-plus": "^1.0.2-beta.36",
+    "qs": "^6.10.1",
     "vue": "^3.0.5",
     "vue-router": "^4.0.5",
     "vuex": "^4.0.0"
   },
   "devDependencies": {
     "@types/node": "^14.14.37",
+    "@types/qs": "^6.9.6",
     "@typescript-eslint/eslint-plugin": "^4.20.0",
     "@typescript-eslint/parser": "^4.20.0",
     "@vitejs/plugin-vue": "^1.2.1",

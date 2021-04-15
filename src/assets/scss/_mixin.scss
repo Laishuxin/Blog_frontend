@@ -3,6 +3,6 @@
 // y-direction: >0 represent +y, <0 represent -y
 @mixin card-box-shadow-mixin($y-direction: 1) {
   $y: 1px * $y-direction;
-  box-shadow: 0 $y 3px var(--card-shadow-color, rgb(18 18 18 / 10%));
+  box-shadow: 0 $y 3px 2px var(--card-shadow-color, rgb(18 18 18 / 10%));
 }
 // end box-shadow
