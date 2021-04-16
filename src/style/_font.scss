@@ -14,6 +14,10 @@
   }
 }
 
+.text-center {
+  text-align: center;
+}
+
 // text-primary: color: xxx, ...
 @each $key, $var in $colors {
   .text-#{$key} {

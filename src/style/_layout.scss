@@ -9,6 +9,17 @@
 // mt-1: xxx
 // $type-alias = m, $type-name = margin
 @each $type-alias, $type-name in $spacing-types {
+  // m-auto: margin: auto
+  .#{$type-alias}-auto {
+    #{type-name}: auto;
+  }
+  .#{type-alias}x-auto {
+    #{type-name}: 0 auto;
+  }
+  .#{type-alias}y-auto {
+    #{type-name}: auto 0;
+  }
+
   // $size-alias = 0, $size-name = 0
   @each $size-alias, $size-name in $spacing-sizes {
     // mx-1: xxx
@@ -49,8 +60,21 @@
   .w-#{$key} {
     width: $value;
   }
+  .w-max-#{key} {
+    max-width: $value;
+  }
+  .w-min-#{key} {
+    min-width: $value;
+  }
+
   .h-#{$key} {
     height: $value;
+  }
+  .h-max-#{key} {
+    max-height: $value;
+  }
+  .h-min-#{key} {
+    min-height: $value;
   }
 }
 
@@ -67,13 +91,13 @@
   z-index: $zindex-sticky;
 }
 
-.zindex-fixed{
+.zindex-fixed {
   z-index: $zindex-fixed;
 }
 .zindex-offcanvas {
   z-index: $zindex-offcanvas;
 }
-.zindex-modal-backdrop{
+.zindex-modal-backdrop {
   z-index: $zindex-modal-backdrop;
 }
 .zindex-modal {
@@ -90,7 +114,6 @@
 }
 // z-index end
 
-
 // position start
 @each $p-name in $position-items {
   .position-#{$p-name} {
@@ -98,3 +121,15 @@
   }
 }
 // position end
+
+// border start
+// border-1-primary: border: 1px solid primary-color;
+@each $color-name, $color in $colors {
+  @for $size from 0 through 1 {
+    .border-#{$size}-#{$color-name} {
+      border: #{$size}px solid $color;
+    }
+  }
+}
+
+// border end
