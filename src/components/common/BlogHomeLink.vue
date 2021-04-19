@@ -1,6 +1,6 @@
 <template>
   <div class="blog-home-link">
-    <a href="#" class="home-link d-flex h-100">
+    <a href="#" class="home-link d-flex align-center h-100">
       <img src="~@/assets/images/logo.png" alt="logo" class="logo mr-2" />
       <span class="site-name">Ru Shui</span>
     </a>

@@ -5,7 +5,7 @@
       class="box-border bg-white position-fixed zindex-sticky"
     ></blog-header>
     <!-- header end -->
-    <router-view class="blog-view"></router-view>
+    <router-view class="blog-view flex-1"></router-view>
     <!-- footer start -->
     <blog-footer class="bg-white"></blog-footer>
     <!-- footer end -->

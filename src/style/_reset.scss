@@ -287,7 +287,7 @@ aside,
 header,
 main,
 input,
-footer {
+footer, section {
   box-sizing: border-box;
   &::selection {
     background: var(--selection-bg-color, #90ee90);

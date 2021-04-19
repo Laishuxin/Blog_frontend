@@ -1,5 +1,5 @@
 <template>
-  <nav class="blog-nav">
+  <nav class="blog-nav d-flex align-center">
     <ul class="nav-list" v-if="blogNavList">
       <blog-nav-item
         v-for="item in blogNavList"
