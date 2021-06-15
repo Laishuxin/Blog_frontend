@@ -2,8 +2,8 @@
   <div class="blog-profile">
     <el-dropdown trigger="click">
       <span class="el-dropdown-link">
-         <!-- TODO(rushui 2021-04-19): :src -->
-        <img class="avatar" src="@/assets/images/logo.png" alt="avatar">
+        <!-- TODO(rushui 2021-04-19): :src -->
+        <img class="avatar" src="@/assets/images/logo.png" alt="avatar" />
       </span>
       <template #dropdown>
         <el-dropdown-menu>
@@ -27,7 +27,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.avatar{
+.avatar {
   width: 30px;
   height: 30px;
 }

@@ -1,5 +1,6 @@
 <template>
   <div class="blog-swipe">
+    <!-- <img src="~@/assets/images/swipe.jpg"> -->
     swipe
   </div>
 </template>
@@ -16,6 +17,11 @@ export default defineComponent({
 
 <style scoped>
 .blog-swipe {
-  height: 200px;
+  height: 450px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
 }
 </style>

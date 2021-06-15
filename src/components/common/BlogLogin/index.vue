@@ -2,7 +2,7 @@
   <div
     class="blog-login d-flex justify-center align-center w-100 h-100 bg-white"
   >
-    <div class="login-wrap w-45">
+    <div class="login-wrap w-45 mt-4">
       <div class="logo mb-4 text-center">
         <img src="~@/assets/images/logo.png" alt="logo" />
       </div>
@@ -52,7 +52,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref, unref } from 'vue'
+import { defineComponent, ref, unref } from 'vue'
 export default defineComponent({
   name: 'blog-login',
   setup(props, context) {

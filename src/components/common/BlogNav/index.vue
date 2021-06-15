@@ -1,37 +1,37 @@
 <template>
-  <nav class="blog-nav d-flex align-center">
-    <ul class="nav-list" v-if="blogNavList">
-      <blog-nav-item
-        v-for="item in blogNavList"
-        :key="item.name"
-        :blogNavItem="item"
-      >
-      </blog-nav-item>
-    </ul>
-  </nav>
+  <el-menu mode="horizontal" router>
+    <blog-nav-item
+      v-for="item in blogNavList"
+      :key="item.path"
+      :blogNavItem="item"
+    />
+  </el-menu>
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from 'vue'
-import { BlogNavList } from '@/types/defineBlogNav'
+import { defineComponent, PropType, ref } from 'vue'
 import BlogNavItem from '@/components/common/BlogNav/BlogNavItem.vue'
+import { NavItem, NavList } from '@/store/'
 
 export default defineComponent({
   name: 'blog-nav',
   props: {
     blogNavList: {
-      type: Array as PropType<BlogNavList>,
-      require: true
-    }
+      type: Array as PropType<NavList>,
+      require: true,
+    },
   },
   components: {
-    BlogNavItem
+    BlogNavItem,
   },
-  setup () {
+  setup() {
     return {}
-  }
+  },
 })
 </script>
 
 <style>
+.el-menu {
+  border: none !important;
+}
 </style>

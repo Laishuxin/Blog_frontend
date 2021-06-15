@@ -1,5 +1,5 @@
 <template>
-  <div class="login">
+  <div class="login bg-white">
     <div class="h-100" v-if="isLogin">
       <blog-not-found />
     </div>

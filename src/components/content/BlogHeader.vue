@@ -2,13 +2,12 @@
   <header
     class="blog-header d-flex justify-between align-center text-sm card-box-shadow-positive py-1 px-6"
   >
-    <!-- TODO(rushui 2021-04-19): link to home page -->
     <blog-home-link class="h-100 d-flex" />
     <blog-nav class="h-100" :blogNavList="navList" />
     <div class="wrapper d-flex justify-center align-center">
       <blog-search class="" />
       <!-- TODO(rushui 2021-04-19): isLogin? show profile : show login button -->
-      <blog-profile class="flex-0 ml-4" />
+      <!-- <blog-profile class="flex-0 ml-4" /> -->
     </div>
   </header>
 </template>
@@ -20,7 +19,6 @@ import BlogSearch from '@/components/common/BlogSearch.vue'
 import BlogProfile from '@/components/common/BlogProfile/index.vue'
 
 import { computed, defineComponent, ref } from 'vue'
-import { BlogNavList } from '@/types/defineBlogNav'
 import { State, useStore } from '@/store'
 import { Store } from 'vuex'
 import { validate } from '@/api/Auth'
@@ -42,6 +40,7 @@ function preLogin(store: Store<State>) {
       }
     })
 }
+
 export default defineComponent({
   name: 'blog-header',
   components: {
@@ -54,10 +53,8 @@ export default defineComponent({
     const store = useStore()
     const isLogin = computed(() => store.state.isLogin)
     const user = computed(() => store.state.user)
+    const navList = store.state.navList
     if (!isLogin.value) preLogin(store)
-
-    const _navList: BlogNavList = [{ name: '首页', path: '/home' }]
-    const navList = ref(_navList)
 
     return {
       navList,

@@ -7,8 +7,6 @@ import About from '@/views/About/index.vue'
 import Login from '@/views/Login/index.vue'
 import OffLine from '@/views/OffLine/index.vue'
 import NotFound from '@/views/NotFound/index.vue'
-import { useStore } from '@/store'
-const store = useStore()
 
 const routes: RouteRecordRaw[] = [
   {
@@ -65,7 +63,8 @@ const router = createRouter({
 
 export function push(path: string, delay = 0) {
   if (router.currentRoute.value.path !== path) {
-    setTimeout(() => router.push(path), delay)
+    if (delay >= 0) setTimeout(() => router.push(path), delay)
+    else router.push(path)
   }
 }
 
